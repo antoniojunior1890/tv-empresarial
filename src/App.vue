@@ -11,6 +11,10 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  created() {
+    // eslint-disable-next-line
+    this.$http.get('/id/1.json').then(res => console.log(res.data))
   }
 }
 </script>
