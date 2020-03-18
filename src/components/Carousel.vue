@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ slide }}
     <b-carousel
       id="carousel"
       v-model="slide"
@@ -39,7 +38,7 @@ export default {
     this.$http
       .get("/all.json")
       .then(res => {
-        this.images = { ...res.data, born: "123" };
+        this.images = res.data;
       })
       .catch(function(error) {
         /* eslint-disable */
